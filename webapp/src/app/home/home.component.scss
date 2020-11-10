@@ -6,10 +6,12 @@
   markdown ::ng-deep {
     h1 {
       @apply text-xl;
+      @apply font-semibold;
     }
     p {
       @apply text-base;
       @apply text-justify;
+      @apply mb-3;
     }
   }
 }
