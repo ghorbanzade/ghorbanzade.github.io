@@ -1,6 +1,18 @@
 {
-  "name": "webapp",
+  "name": "ghorbanzade.github.io",
+  "description": "Personal Webpage of Pejman Ghorbanzade",
   "version": "0.0.0",
+  "license": "MIT",
+  "homepage": "ghorbanzade.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghorbanzade/ghorbanzade.github.io"
+  },
+  "author": {
+    "name": "Pejman Ghorbanzade",
+    "email": "pejman@ghorbanzade.com",
+    "url": "https://pejman.dev"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
