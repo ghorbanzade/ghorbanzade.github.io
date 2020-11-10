@@ -1,3 +1,7 @@
+/**
+ * Copyright 2020 Pejman Ghorbanzade. All rights reserved.
+ */
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

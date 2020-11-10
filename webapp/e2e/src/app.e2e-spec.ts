@@ -1,3 +1,7 @@
+/**
+ * Copyright 2020 Pejman Ghorbanzade. All rights reserved.
+ */
+
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 

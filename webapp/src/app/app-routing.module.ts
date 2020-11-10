@@ -1,3 +1,7 @@
+/**
+ * Copyright 2020 Pejman Ghorbanzade. All rights reserved.
+ */
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
