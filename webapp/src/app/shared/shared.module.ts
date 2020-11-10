@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MarkdownModule } from 'ngx-markdown';
 import { SocialComponent } from './components/social.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
   declarations: [
     SocialComponent
@@ -14,6 +18,7 @@ import { SocialComponent } from './components/social.component';
   exports: [
     CommonModule,
     FontAwesomeModule,
+    MarkdownModule,
     SocialComponent
   ]
 })
