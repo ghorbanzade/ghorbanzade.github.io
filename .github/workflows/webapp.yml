@@ -1,0 +1,29 @@
+#
+# Copyright 2020 Pejman Ghorbanzade. All rights reserved.
+#
+
+name: webapp
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  webapp-local:
+    name: webapp-local
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('webapp/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - run: yarn --cwd=webapp install
+      - run: yarn --cwd=webapp build
