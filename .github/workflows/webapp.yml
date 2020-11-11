@@ -26,4 +26,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn --cwd=webapp install
-      - run: yarn --cwd=webapp build
+      - run: yarn --cwd=webapp build --prod
+      - uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: webapp/dist
