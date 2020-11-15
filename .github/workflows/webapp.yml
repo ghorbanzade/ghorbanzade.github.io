@@ -40,5 +40,9 @@ jobs:
           name: dist
           path: webapp/dist
       - run: docker login ${DOCKER_REGISTRY_URL} --username ${DOCKER_USERNAME} --password "${DOCKER_PASSWORD}"
-      - run: docker-compose -f config/prod/docker-compose.yml -p gio --project-directory . build
+      - run: docker-compose -f deploy/docker-compose.yml -p gio --project-directory . build
       - run: docker push ${DOCKER_REGISTRY_URL}/ghorbanzade/ghorbanzade.github.io/gio-webapp:latest
+      - uses: actions/upload-artifact@v2
+        with:
+          name: deploy
+          path: deploy
