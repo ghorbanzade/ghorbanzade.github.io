@@ -13,6 +13,10 @@ jobs:
   webapp-local:
     name: webapp-local
     runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_GPR_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_GPR_PASSWORD }}
+      DOCKER_REGISTRY_URL: docker.pkg.github.com
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -35,3 +39,6 @@ jobs:
         with:
           name: dist
           path: webapp/dist
+      - run: docker login ${DOCKER_REGISTRY_URL} --username ${DOCKER_USERNAME} --password "${DOCKER_PASSWORD}"
+      - run: docker-compose -f config/prod/docker-compose.yml -p gio --project-directory . build
+      - run: docker push ${DOCKER_REGISTRY_URL}/ghorbanzade/ghorbanzade.github.io/gio-webapp:latest
