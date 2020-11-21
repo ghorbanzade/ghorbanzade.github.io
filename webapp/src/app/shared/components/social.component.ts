@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -14,7 +14,7 @@ export class SocialComponent {
   faLinkedin = faLinkedin;
 
   constructor(faIconLibrary: FaIconLibrary) {
-    faIconLibrary.addIcons(faEnvelope, faGithub, faLinkedin, faTwitter);
+    faIconLibrary.addIcons(faCalendarAlt, faEnvelope, faGithub, faLinkedin, faTwitter);
   }
 
 }
