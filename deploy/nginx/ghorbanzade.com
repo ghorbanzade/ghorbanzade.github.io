@@ -1,7 +1,3 @@
-#
-# Copyright 2020 Pejman Ghorbanzade. All rights reserved.
-#
-
 # limit request sizes
 client_max_body_size 20m;
 
