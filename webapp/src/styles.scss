@@ -1,11 +1,5 @@
-/**
- * Copyright 2020 Pejman Ghorbanzade. All rights reserved.
- */
+// Copyright 2022 Pejman Ghorbanzade. Subject to Apache-2.0 License.
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-body {
-  background-color: #f9f9f9;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

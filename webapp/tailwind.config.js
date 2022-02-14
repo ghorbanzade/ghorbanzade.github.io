@@ -1,16 +1,8 @@
-module.exports = (isProd) => ({
-  prefix: '',
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
-  },
-  purge: {
-    enabled: isProd,
-    content: ['./src/**/*.html', './src/**/*.ts']
-  },
+module.exports = {
+  mode: "jit",
+  content: ["./src/**/*.{html,scss,ts}"],
   theme: {
     extend: {},
   },
-  variants: {},
-  plugins: []
-});
+  plugins: [require("@tailwindcss/typography")],
+};
