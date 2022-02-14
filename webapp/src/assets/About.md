@@ -1,5 +1,5 @@
-I am building [Touca], helping software engineers understand the true impact
-of their code changes on the behavior and performance of their software.
+I am building [Touca] to help software engineers find the unintended side-effects
+of their daily code changes on the behavior and performance of their product.
 
 Before Touca, I was a senior software engineer at Canon Medical Informatics
 building software for advanced visualization of medical images. Before that,
