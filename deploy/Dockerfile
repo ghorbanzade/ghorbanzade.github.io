@@ -1,7 +1,3 @@
-#
-# Copyright 2020 Pejman Ghorbanzade. All rights reserved.
-#
-
 FROM nginx:1.15-alpine
 
 LABEL maintainer="pejman@ghorbanzade.com"
