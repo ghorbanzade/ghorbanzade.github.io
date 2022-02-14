@@ -1,25 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MarkdownModule } from 'ngx-markdown';
+import { NgIconsModule } from '@ng-icons/core';
+import {
+  BootstrapCalendar3,
+  BootstrapEnvelope,
+  BootstrapGithub,
+  BootstrapLinkedin,
+  BootstrapTwitter,
+} from '@ng-icons/bootstrap-icons';
+
 import { SocialComponent } from './components/social.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule,
     HttpClientModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    NgIconsModule.withIcons({
+      BootstrapCalendar3,
+      BootstrapEnvelope,
+      BootstrapGithub,
+      BootstrapLinkedin,
+      BootstrapTwitter,
+    }),
   ],
-  declarations: [
-    SocialComponent
-  ],
-  exports: [
-    CommonModule,
-    FontAwesomeModule,
-    MarkdownModule,
-    SocialComponent
-  ]
+  declarations: [SocialComponent],
+  exports: [CommonModule, MarkdownModule, NgIconsModule, SocialComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
