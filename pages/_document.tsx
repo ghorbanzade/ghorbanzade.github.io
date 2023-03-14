@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         <base href="/" />
       </Head>
-      <body className="bg-slate-100 font-sans antialiased dark:bg-black">
+      <body className="bg-slate-100 font-sans antialiased dark:bg-slate-900">
         <Main />
         <NextScript />
       </body>

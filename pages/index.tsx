@@ -20,7 +20,7 @@ export default function Page(props: PageContent) {
         />
       </Head>
       <div className="mx-auto max-w-screen-lg md:grid md:grid-cols-4 md:gap-3">
-        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-slate-900 md:col-span-1 md:border">
+        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-bl dark:from-black dark:to-slate-900 md:col-span-1 md:border">
           <div className="space-y-4 md:flex md:h-full md:flex-wrap md:content-between">
             <div className="hidden py-2 text-center md:block">
               <Image
@@ -40,7 +40,7 @@ export default function Page(props: PageContent) {
             <SocialLinks />
           </div>
         </div>
-        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-slate-900 md:col-span-3 md:border">
+        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 md:col-span-3 md:border">
           <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
             {props.about}
           </Markdown>
