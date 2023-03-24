@@ -6,6 +6,7 @@ import SocialLinks from '@/components/social';
 
 import Markdown from 'markdown-to-jsx';
 import Head from 'next/head';
+import DarkModeButton from '@/components/darkMode';
 
 type PageContent = Record<'name' | 'title' | 'about', string>;
 
@@ -40,7 +41,10 @@ export default function Page(props: PageContent) {
             <SocialLinks />
           </div>
         </div>
-        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 md:col-span-3 md:border">
+        <div className="relative rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 md:col-span-3 md:border">
+          <div className="absolute right-8 top-8">
+            <DarkModeButton />
+          </div>
           <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
             {props.about}
           </Markdown>
