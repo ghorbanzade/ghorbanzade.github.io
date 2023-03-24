@@ -42,7 +42,8 @@ export default function DarkModeButton() {
   return (
     <Icon
       size="1.5em"
-      className="cursor-pointer text-slate-200 dark:text-slate-700"
+      className="cursor-pointer text-slate-200 transition ease-in-out hover:text-slate-300 dark:text-slate-700 dark:hover:text-slate-500"
+      title={`Switch to ${darkMode ? 'light mode' : 'dark mode'}`}
       onClick={toggleDarkMode}
     />
   );
