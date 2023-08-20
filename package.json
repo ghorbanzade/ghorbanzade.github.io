@@ -10,7 +10,7 @@
   },
   "author": {
     "name": "Pejman Ghorbanzade",
-    "email": "pejman@touca.io"
+    "email": "pejman@ghorbanzade.com"
   },
   "private": true,
   "scripts": {
@@ -21,24 +21,25 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/node": "^18.16.1",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.1",
-    "eslint": "^8.39.0",
-    "eslint-config-next": "^13.3.1",
-    "markdown-to-jsx": "^7.2.0",
-    "next": "^13.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
-    "typescript": "^5.0.4"
+    "markdown-to-jsx": "^7.3.2",
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "sharp": "^0.32.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.7",
-    "tailwindcss": "^3.3.2"
+    "@types/node": "^20.5.1",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^13.4.19",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
   }
 }
