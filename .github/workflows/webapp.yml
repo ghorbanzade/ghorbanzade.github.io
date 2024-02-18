@@ -7,8 +7,7 @@ on:
       - 'feature/**'
 
 jobs:
-  webapp-local:
-    name: webapp-local
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +17,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
         with:
           static_site_generator: next
       - run: npm ci
