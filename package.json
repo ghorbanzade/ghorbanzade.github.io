@@ -16,7 +16,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "export": "next build && next export && touch ./out/.nojekyll && echo pejman.dev > ./out/CNAME",
+    "export": "next build && touch ./out/.nojekyll && echo pejman.dev > ./out/CNAME",
     "lint": "next lint",
     "start": "next start"
   },
