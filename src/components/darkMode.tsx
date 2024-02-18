@@ -1,4 +1,5 @@
 // Copyright 2023 Pejman Ghorbanzade
+'use client'
 
 import { useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';

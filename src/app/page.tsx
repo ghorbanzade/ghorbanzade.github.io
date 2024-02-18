@@ -1,25 +1,19 @@
 // Copyright 2023 Pejman Ghorbanzade
 
 import Image from 'next/image';
-import profilePicture from '@/public/images/pejman.jpg';
-import SocialLinks from '@/components/social';
-
 import Markdown from 'markdown-to-jsx';
-import Head from 'next/head';
-import DarkModeButton from '@/components/darkMode';
 
-type PageContent = Record<'name' | 'title' | 'about', string>;
+import profilePicture from '@/public/images/pejman.jpg';
+import SocialLinks from '@/src/components/social';
+import DarkModeButton from '@/src/components/darkMode';
 
-export default function Page(props: PageContent) {
+export default async function Page() {
+  const aboutPage = await fetch(
+    'https://raw.githubusercontent.com/ghorbanzade/ghorbanzade/main/Readme.md'
+  );
+  const fileContent = await aboutPage.text()
   return (
-    <div className="flex h-screen md:items-center">
-      <Head>
-        <title>Pejman Ghorbanzade</title>
-        <meta
-          name="description"
-          content="Personal Website of Pejman Ghorbanzade"
-        />
-      </Head>
+    <main className="flex h-screen md:items-center">
       <div className="mx-auto max-w-screen-lg md:grid md:grid-cols-4 md:gap-3">
         <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-bl dark:from-black dark:to-slate-900 md:col-span-1 md:border">
           <div className="space-y-4 md:flex md:h-full md:flex-wrap md:content-between">
@@ -27,16 +21,12 @@ export default function Page(props: PageContent) {
               <Image
                 className="rounded-lg"
                 src={profilePicture}
-                alt={props.name}
+                alt="Pejman Ghorbanzade"
               />
             </div>
             <div className="w-full text-center">
-              <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-200">
-                {props.name}
-              </h1>
-              <h2 className="text-slate-600 dark:text-slate-300">
-                {props.title}
-              </h2>
+              <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-200">Pejman Ghorbanzade</h1>
+              <h2 className="text-slate-600 dark:text-slate-300">Software Engineer</h2>
             </div>
             <SocialLinks />
           </div>
@@ -46,23 +36,10 @@ export default function Page(props: PageContent) {
             <DarkModeButton />
           </div>
           <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
-            {props.about}
+            {fileContent}
           </Markdown>
         </div>
       </div>
-    </div>
+    </main>
   );
-}
-
-export async function getStaticProps(): Promise<{ props: PageContent }> {
-  const fileContents = await fetch(
-    'https://raw.githubusercontent.com/ghorbanzade/ghorbanzade/main/Readme.md'
-  );
-  return {
-    props: {
-      name: 'Pejman Ghorbanzade',
-      title: 'Software Engineer',
-      about: await fileContents.text()
-    }
-  };
 }

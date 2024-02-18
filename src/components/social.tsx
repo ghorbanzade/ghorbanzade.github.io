@@ -46,7 +46,7 @@ export default function SocialLinks() {
     {
       icon: FiMail,
       title: 'Send me an email',
-      link: 'mailto:pejman@touca.io'
+      link: 'mailto:pejman@ghorbanzade.io'
     },
     {
       icon: FiVideo,
