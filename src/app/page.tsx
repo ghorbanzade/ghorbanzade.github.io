@@ -15,12 +15,12 @@ export default async function Page() {
   const fileContent = await aboutPage.text()
   return (
     <main className="flex h-screen md:items-center">
-      <div className="mx-auto max-w-screen-lg">
+      <div className="mx-auto max-w-(--breakpoint-lg)">
         <div className='py-6 justify-center flex'>
           <NavBar />
         </div>
         <div className="md:grid md:grid-cols-4 md:gap-3">
-          <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-bl dark:from-black dark:to-slate-900 md:col-span-1 md:border">
+          <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-linear-to-bl dark:from-black  dark:via-slate-950 dark:to-slate-900 md:col-span-1 md:border">
             <div className="space-y-4 md:flex md:h-full md:flex-wrap md:content-between">
               <div className="hidden py-2 text-center md:block">
                 <Image
@@ -36,11 +36,12 @@ export default async function Page() {
               <SocialLinks />
             </div>
           </div>
-          <div className="relative rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 md:col-span-3 md:border">
+          <div className="relative rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-linear-to-br dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 md:col-span-3 md:border">
             <div className="absolute right-8 top-8">
               <DarkModeButton />
             </div>
-            <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
+            <Markdown className="wsl-mark prose prose-base
+            prose-a:no-underline prose-slate min-w-full dark:prose-invert">
               {fileContent}
             </Markdown>
           </div>
