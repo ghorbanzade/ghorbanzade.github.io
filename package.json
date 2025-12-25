@@ -15,37 +15,37 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "export": "next build && touch ./out/.nojekyll && echo pejman.dev > ./out/CNAME",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "next start"
   },
   "dependencies": {
     "@ghorbanzade/talks": "file:../talks",
     "cd": "^0.3.3",
-    "markdown-to-jsx": "^7.7.4",
-    "next": "15.2.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "markdown-to-jsx": "^9.5.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.17",
-    "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^22.13.14",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
-    "eslint": "^9.23.0",
-    "eslint-config-next": "15.2.4",
-    "postcss": "^8.4.35",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.17",
-    "typescript": "^5.8.2"
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.0.3",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "overrides": {
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4"
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }
